@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Update Student</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #eef2ff, #f8fafc);
+            padding: 40px 20px;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 17px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        button,
+        .back {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .update {
+            background: #2563eb;
+            color: white;
+        }
+
+        .update:hover {
+            background: #1d4ed8;
+        }
+
+        .back {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .back:hover {
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="box">
+
+        <h1>Update Student</h1>
+
+        <p class="subtitle">
+            Enter the student's details to update the record
+        </p>
+
+        <form action="/update" method="post" th:object="${student}">
+
+            <label>Roll Number</label>
+            <input type="text" th:field="*{rollNo}" required>
+
+            <label>Name</label>
+            <input type="text" th:field="*{name}" required>
+
+            <label>Age</label>
+            <input type="number" th:field="*{age}">
+
+            <label>Gender</label>
+            <input type="text" th:field="*{gender}">
+
+            <label>Course</label>
+            <input type="text" th:field="*{course}">
+
+            <label>Phone</label>
+            <input type="text" th:field="*{phone}">
+
+            <label>Email</label>
+            <input type="email" th:field="*{email}">
+
+            <label>Address</label>
+            <input type="text" th:field="*{address}">
+
+            <div class="buttons">
+                <button type="submit" class="update">
+                    Update Student
+                </button>
+
+                <a href="/" class="back">
+                    Back to Home
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #eef2ff, #f8fafc);
+            color: #1e293b;
+        }
+
+        .header {
+            background: #1e3a8a;
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .welcome h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .welcome p {
+            color: #64748b;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #64748b;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 11px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .delete-btn {
+            background: #dc2626;
+        }
+
+        .delete-btn:hover {
+            background: #b91c1c;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <h1>Student Management System</h1>
+    <p>Manage student information easily and efficiently</p>
+</header>
+
+<main class="container">
+
+    <section class="welcome">
+        <h2>Welcome!</h2>
+        <p>Select an option below to manage student records.</p>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Add Student</h3>
+            <p>Add a new student to the database.</p>
+            <a href="/add" class="btn">Add Student</a>
+        </div>
+
+        <div class="card">
+            <h3>View Students</h3>
+            <p>View all registered students.</p>
+            <a href="/students" class="btn">View Students</a>
+        </div>
+
+        <div class="card">
+            <h3>Search Student</h3>
+            <p>Find a student using their roll number.</p>
+            <a href="/search" class="btn">Search Student</a>
+        </div>
+
+        <div class="card">
+            <h3>Update Student</h3>
+            <p>Update existing student information.</p>
+            <a href="/update" class="btn">Update Student</a>
+        </div>
+
+        <div class="card">
+            <h3>Delete Student</h3>
+            <p>Remove a student from the database.</p>
+            <a href="/delete" class="btn delete-btn">Delete Student</a>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    Student Management System © 2026
+</footer>
+
+</body>
+</html>
+
